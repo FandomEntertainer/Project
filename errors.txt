@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/screens.rpy", line 138: style property xalign appears twice.
+    xalign gui.textbox_xalign
+          ^
+
+Ren'Py Version: Ren'Py 7.3.5.606
+Sun Jul 17 02:34:29 2022
