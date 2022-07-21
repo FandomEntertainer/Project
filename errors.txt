@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 1159: u'zoom' is not a keyword argument or valid child for the vbox statement.
-    zoom 1.25
-        ^
+File "game/screens.rpy", line 299: u'I' is not a keyword argument or valid child for the vbox statement.
+    yalign 0.5I
+               ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Jul 20 19:21:02 2022
+Wed Jul 20 20:23:25 2022

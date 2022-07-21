@@ -279,6 +279,7 @@ style quick_button:
 
 style quick_button_text:
     properties gui.button_text_properties("quick_button")
+    size 25
 
 
 ################################################################################
@@ -533,8 +534,8 @@ style game_menu_label_text:
 
 style return_button:
     xpos gui.navigation_xpos
-    yalign 1.0
-    yoffset -30
+    yalign 1.1
+    yoffset -60
 
 
 ## About screen ################################################################

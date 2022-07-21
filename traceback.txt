@@ -39,4 +39,4 @@ Exception: Couldn't find a place to stop rolling back. Perhaps the script change
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Passion Fruits - Demo 1.0
-Wed Jul 20 19:21:29 2022
+Wed Jul 20 20:41:49 2022
