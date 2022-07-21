@@ -145,6 +145,7 @@ style namebox:
     ypos gui.name_ypos
     ysize gui.namebox_height
 
+
     background Frame("gui/namebox.png", gui.namebox_borders, tile=gui.namebox_tile, xalign=gui.name_xalign)
     padding gui.namebox_borders.padding
 
@@ -1143,7 +1144,7 @@ screen confirm(message, yes_action, no_action):
     ## Ensure other screens do not get input while this screen is displayed.
     modal True
 
-    zorder 200
+    zorder 800
 
     style_prefix "confirm"
 
@@ -1185,6 +1186,7 @@ style confirm_frame:
 
 style confirm_prompt_text:
     text_align 0.5
+    ypos 20
     layout "subtitle"
 
 style confirm_button:

@@ -16,7 +16,16 @@ define a = Character("???")
 
 #Colors for Character names
 
-define swk = Character(_("Sun Wukong"), color ="#fcfcfc")
+define swk = Character("Sun Wukong", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
+define u = Character("[name]", color ="#fcfcfc")
+define fp = Character("Fyuree Pashé", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
+define ma = Character("Ai Mishaekho", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
+define mac = Character("Macaque", color ="#fcfcfc",who_outlines=[(absolute(3),"#6f048c",absolute(0),absolute(0))])
+define mk = Character("MK", color ="#fcfcfc",who_outlines=[(absolute(3),"#d1870f",absolute(0),absolute(0))])
+define mei = Character("Mei", color ="#fcfcfc",who_outlines=[(absolute(3),"#29c910",absolute(0),absolute(0))])
+define rs = Character("Red Son", color ="#fcfcfc",who_outlines=[(absolute(3),"#f00905",absolute(0),absolute(0))])
+define tang = Character("Tang", color ="#fcfcfc",who_outlines=[(absolute(3),"#e3d509",absolute(0),absolute(0))])
+define a = Character("???", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
 
 
 # Positions for the spritesS
@@ -109,6 +118,8 @@ image temporary = im.Scale("temporary.jpg", 1300, 800)
 
 define Wukong_Trust = 0
 define Macaque_Trust = 0
+
+#Random things
 
 
 

@@ -1,40 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-After initialization, but before game start.
-  File "renpy/common/00start.rpy", line 82, in _init_language
-    renpy.change_language(language)
-  File "game/screens.rpy", line 137, in <module>
-    xalign gui.textbox_xalign
-AttributeError: 'StoreModule' object has no attribute 'textbox_xalign'
+While running game code:
+  File "renpy/common/00start.rpy", line 212, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 456, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 456, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 466, in _execute_python_hide
+    renpy.load("_reload-2")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\bootstrap.py", line 316, in bootstrap
-    renpy.main.main()
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 578, in main
-    run(restart)
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\main.py", line 75, in run
-    renpy.translation.init_translation()
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\translation\__init__.py", line 558, in init_translation
-    renpy.store._init_language()  # @UndefinedVariable
-  File "renpy/common/00start.rpy", line 82, in _init_language
-    renpy.change_language(language)
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\translation\__init__.py", line 638, in change_language
-    new_change_language(tl, language)
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\translation\__init__.py", line 604, in new_change_language
-    i.apply()
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 2553, in apply
-    value = renpy.python.py_eval(expr)
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2059, in py_eval
-    return py_eval_bytecode(code, globals, locals)
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2052, in py_eval_bytecode
-    return eval(bytecode, globals, locals)
-  File "game/screens.rpy", line 137, in <module>
-    xalign gui.textbox_xalign
-AttributeError: 'StoreModule' object has no attribute 'textbox_xalign'
+  File "renpy/common/00start.rpy", line 212, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 456, in script
+    python hide:
+  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 914, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 2028, in py_exec_bytecode
+    exec bytecode in globals, locals
+  File "renpy/common/00keymap.rpy", line 456, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 466, in _execute_python_hide
+    renpy.load("_reload-2")
+  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\loadsave.py", line 770, in load
+    log.unfreeze(roots, label="_after_load")
+  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 1983, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 1815, in rollback
+    self.load_failed()
+  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\python.py", line 1733, in load_failed
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 Windows-8-6.2.9200
 Ren'Py 7.3.5.606
 Passion Fruits - Demo 1.0
-Sun Jul 17 02:34:43 2022
+Wed Jul 20 19:21:29 2022
