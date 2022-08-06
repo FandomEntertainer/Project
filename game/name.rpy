@@ -75,6 +75,7 @@ label start_game:
     show mk placeholder at right with moveinright
     show redson placeholder at farleft with moveinleft
     swk "You chose They/Them Pronouns."
+    swk "Hello, [name]!"
     pause
     return
 

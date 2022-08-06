@@ -26,14 +26,14 @@ init python:
 define gui.accent_color = '#cc0000'
 
 ## The color used for a text button when it is neither selected nor hovered.
-define gui.idle_color = '#888888'
+define gui.idle_color = '#FECD05'
 
 ## The small color is used for small text, which needs to be brighter/darker to
 ## achieve the same effect.
 define gui.idle_small_color = '#aaaaaa'
 
 ## The color that is used for buttons and bars that are hovered.
-define gui.hover_color = '#e06666'
+define gui.hover_color = '#EF1C26'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
@@ -61,13 +61,13 @@ define gui.text_font = "EduTASBeginner.ttf"
 define gui.name_text_font = "Dominique.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "Always Lovely.ttf"
+define gui.interface_text_font = "NoodleBrain_Filled_WIP_.ttf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 25
 
 ## The size of character names.
-define gui.name_text_size = 45
+define gui.name_text_size = 40
 
 ## The size of text in the game's user interface.
 define gui.interface_text_size = 45
@@ -80,7 +80,6 @@ define gui.notify_text_size = 16
 
 ## The size of the game's title.
 define gui.title_text_size = 50
-
 
 ## Main and Game Menus #########################################################
 
@@ -137,6 +136,8 @@ define gui.dialogue_width = 744
 ## The horizontal alignment of the dialogue text. This can be 0.0 for left-
 ## aligned, 0.5 for centered, and 1.0 for right-aligned.
 define gui.dialogue_text_xalign = 0.0
+
+define line_overlap_split = 5.0
 
 
 ## Buttons #####################################################################
@@ -286,7 +287,7 @@ define gui.main_menu_text_xalign = 1.0
 define gui.frame_borders = Borders(2, 2, 2, 2)
 
 ## The frame that is used as part of the confirm screen.
-define gui.confirm_frame_borders = Borders(140, 60, 140, 60)
+define gui.confirm_frame_borders = Borders(100, 60, 100, 60)
 
 ## The frame that is used as part of the skip screen.
 define gui.skip_frame_borders = Borders(16, 5, 50, 5)

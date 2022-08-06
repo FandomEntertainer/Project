@@ -17,7 +17,7 @@ label gui:
     show redson placeholder at offscreenleft with moveoutleft
     show macaque placeholder at center with moveinright
     mac "..."
-    show mac at offscreenleft with moveoutleft
+    show macaque placeholder at offscreenleft with moveoutleft
     show tang placeholder at center with moveinright
     tang "..."
     pause

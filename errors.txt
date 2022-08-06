@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 299: u'I' is not a keyword argument or valid child for the vbox statement.
-    yalign 0.5I
-               ^
+File "game/screens.rpy", line 405: end of line expected.
+    outlines [(absolute(3),"#000000",absolute(0),absolute(0))])
+                                                              ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Wed Jul 20 20:23:25 2022
+Sat Aug 06 16:14:34 2022

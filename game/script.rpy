@@ -13,20 +13,21 @@ define mei = Character("Mei")
 define rs = Character("Red Son")
 define tang = Character("Tang")
 define a = Character("???")
+define pig = Character("Pigsy")
 
 #Colors for Character names
 
 define swk = Character("Sun Wukong", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
-define u = Character("[name]", color ="#fcfcfc")
-define fp = Character("Fyuree Pashé", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
-define ma = Character("Ai Mishaekho", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
+define u = Character("[name]", color ="#fcfcfc",who_outlines=[(absolute(3),"#000000",absolute(0),absolute(0))])
+define fp = Character("Fyuree Pashé", color ="#fcfcfc",who_outlines=[(absolute(3),"#000000",absolute(0),absolute(0))])
+define ma = Character("Ai Mishaekho", color ="#fcfcfc",who_outlines=[(absolute(3),"#e319b7",absolute(0),absolute(0))])
 define mac = Character("Macaque", color ="#fcfcfc",who_outlines=[(absolute(3),"#6f048c",absolute(0),absolute(0))])
 define mk = Character("MK", color ="#fcfcfc",who_outlines=[(absolute(3),"#d1870f",absolute(0),absolute(0))])
 define mei = Character("Mei", color ="#fcfcfc",who_outlines=[(absolute(3),"#29c910",absolute(0),absolute(0))])
 define rs = Character("Red Son", color ="#fcfcfc",who_outlines=[(absolute(3),"#f00905",absolute(0),absolute(0))])
 define tang = Character("Tang", color ="#fcfcfc",who_outlines=[(absolute(3),"#e3d509",absolute(0),absolute(0))])
-define a = Character("???", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
-
+define a = Character("???", color ="#fcfcfc",who_outlines=[(absolute(3),"#000000",absolute(0),absolute(0))])
+define pig = Character("Pigsy", color ="#fcfcfc")
 
 # Positions for the spritesS
 
@@ -75,6 +76,15 @@ transform offscreenright:
 init:
     $ eyeopen = ImageDissolve("eyeopen.png", 1.5, 100)
     $ eyeclose = ImageDissolve("black.jpg", 1.5, 100, reverse=True)
+
+    define fade = Fade(2.0, 0.0, 2.0)
+
+
+
+##### Don't know what to call these ######
+
+init python:
+    hpunch = Move((5, 0), (-5, 0), .10, bounce=True, repeat=True, delay=.275)
 
 
 # Music for the game goes here:
@@ -145,25 +155,29 @@ label start:
 
 
 
-    "Please choose a mode."
+
     menu:
-
-        "Test":
-            jump test
-
-        "Name":
-            jump name
 
         "Demo":
             jump actual_game
 
+###        "Test":
+###            jump test
+
+###        "Name":
+###            jump name
+
+###            jump actual_game
+
         "Test GUI":
-            jump gui
+           jump gui
 
 label actual_game:
 
-
+    $ quick_menu = False
     show temporary
+    with fade
+    $ quick_menu = True
     "Long ago, seven goddesses blessed the skies with beautiful woven clouds. They were known as the weaver maids."
     "One day, the Emperor of the Heavens allowed the sisters to bathe in a sacred pool on Earth. The maids enjoyed the cool waters and alluring scenery."
     "As the night drew near, the sisters gathered their clothes and headed back to Heaven."
@@ -184,6 +198,9 @@ label actual_game:
     "Moved by the starcrossed lovers, the Empress allowed the family to be reunited once a year."
     "In honor of the lovers, we celebrate their reunion during the Qixi Festival."
     a "No one should be kept from someone they love!"
+    jump act_one
+
+
     pause
     return
 
