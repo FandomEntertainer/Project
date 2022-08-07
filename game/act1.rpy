@@ -58,7 +58,8 @@ label act_one:
     pig "Tang, you still only have one follower.{w} Yourself."
     pig "Don't be upset Fyuree doesn't know who you are."
     "Okay, so you weren't supposed to know someone named Golden Cicada Yum Yum{w}... You  think."
-    "You look away and notice a you ng man listening to music on a pair of headphones dance his way into the store."
+    show mk neutral at center with moveinleft
+    "You look away and notice a young man listening to music on a pair of headphones dance his way into the store."
     "Pigsy's attention immediately shifts to the young man."
     pig "MK! There you are. I've got some more orders for you to take out."
     mk "Alright, Pigsy!"
@@ -74,12 +75,13 @@ label act_one:
     mk "You're a judge? That's so cool! I can't wait to see that!"
     pig "Yeah? Well, if you want to see that you  better finish these deliveries first."
     mk "Right boss!"
+    hide mk at offscreenleft with moveoutleft
     "MK rushes out of the store with the noodles. Pigsy sure does run a tight ship. It looks like some things never change."
     "You look down at your watch and realize that the cooking competition is about to start in fifteen minutes."
     "It's been great seeing you again, Pigsy, but I've gotta. The competition will be starting soon!"
     tang "If you're feeling nervous, I could take your place as a judge."
     fp "Um... I'm good."
-    Pigsy "Leave her alone ya, freeloader."
+    pig "Leave her alone ya, freeloader."
     "You run out of the shop, hoping you'll make it to the competition on time."
 
 
