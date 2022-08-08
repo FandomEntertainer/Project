@@ -1,10 +1,13 @@
 label gui:
 
     scene temporary
-    show wukong placeholder
+    show wukong
     "This is Sun Wukong"
+    $ wukong_talking = True
     swk "Hello"
     swk "How you doing"
+    $ wukong_expression = "Sad"
+    swk "I'm doing terrible... The absolute WORST..."
     show wukong placeholder at offscreenleft with moveoutleft
     show mk placeholder at center with moveinright
     mk "..."
