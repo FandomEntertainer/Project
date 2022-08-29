@@ -4,7 +4,7 @@
 # name of the character.
 
 define swk = Character("Sun Wukong")
-define u = Character("[name]")
+define monk = Character("Monkey King")
 define fp = Character("Fyuree Pashé")
 define ma = Character("Ai Mishaekho")
 define mac = Character("Macaque")
@@ -14,10 +14,13 @@ define rs = Character("Red Son")
 define tang = Character("Tang")
 define a = Character("???")
 define pig = Character("Pigsy")
+define st = Character("Staff Member")
+define an = Character(None)
 
 #Colors for Character names
 
 define swk = Character("Sun Wukong", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
+define monk = Character("Monkey King", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
 define u = Character("[name]", color ="#fcfcfc",who_outlines=[(absolute(3),"#000000",absolute(0),absolute(0))])
 define fp = Character("Fyuree Pashé", color ="#fcfcfc",who_outlines=[(absolute(3),"#000000",absolute(0),absolute(0))])
 define ma = Character("Ai Mishaekho", color ="#fcfcfc",who_outlines=[(absolute(3),"#e319b7",absolute(0),absolute(0))])
@@ -28,6 +31,7 @@ define rs = Character("Red Son", color ="#fcfcfc",who_outlines=[(absolute(3),"#f
 define tang = Character("Tang", color ="#fcfcfc",who_outlines=[(absolute(3),"#e3d509",absolute(0),absolute(0))])
 define a = Character("???", color ="#fcfcfc",who_outlines=[(absolute(3),"#000000",absolute(0),absolute(0))])
 define pig = Character("Pigsy", color ="#fcfcfc")
+define an = Character(None, what_xalign=0.5, what_text_align=0.5,)
 
 # Positions for the spritesS
 
@@ -68,7 +72,7 @@ transform offscreenleft:
     yalign 1.0
 
 transform offscreenright:
-    xalign 1.5
+    xalign 1.9
     yalign 1.0
 
 #Random Transitions
@@ -132,11 +136,10 @@ define Macaque_Trust = 0
 #Random things
 
 
-
-
 # The game starts here.
 
 label start:
+
 
     # Show a background. This uses a placeholder by default, but you can
     # add a file (named either "bg room.png" or "bg room.jpg") to the

@@ -61,10 +61,10 @@ define gui.text_font = "EduTASBeginner.ttf"
 define gui.name_text_font = "Dominique.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "NoodleBrain_Filled_WIP_.ttf"
+define gui.interface_text_font = "Always Lovely.ttf"
 
 ## The size of normal dialogue text.
-define gui.text_size = 25
+define gui.text_size = 20
 
 ## The size of character names.
 define gui.name_text_size = 40
@@ -129,7 +129,7 @@ define gui.namebox_tile = False
 ## number of pixels relative to the left or top side of the textbox, or 0.5 to
 ## center.
 define gui.dialogue_xpos = 260
-define gui.dialogue_ypos = -50
+define gui.dialogue_ypos = -55
 
 ## The maximum width of dialogue text, in pixels.
 define gui.dialogue_width = 744
