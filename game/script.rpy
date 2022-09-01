@@ -120,6 +120,8 @@ image mei placeholder = im.Scale("mei placeholder.png", 750, 780)
 
 image temporary = im.Scale("temporary.jpg", 1300, 800)
 
+image temporary = im.Scale("temporary.jpg", 1300, 800)
+
 
 
 ### Here are the points that will be included in the game

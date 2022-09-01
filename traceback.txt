@@ -1,22 +1,76 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/act1.rpy", line 84, in script
-    Pigsy "Leave her alone ya, freeloader."
-Exception: Sayer 'Pigsy' is not defined.
+  File "game/test_gui.rpy", line 27, in script
+    "Pick topping on cake."
+AttributeError: 'NoneType' object has no attribute 'style'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/act1.rpy", line 84, in script
-    Pigsy "Leave her alone ya, freeloader."
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 678, in execute
-    who = eval_who(self.who, self.who_fast)
-  File "C:\Users\suriv\Downloads\My Things\IMPORTANT\Renpy\renpy-7.3.5-sdk\renpy\ast.py", line 576, in eval_who
-    raise Exception("Sayer '%s' is not defined." % who.encode("utf-8"))
-Exception: Sayer 'Pigsy' is not defined.
+  File "game/test_gui.rpy", line 27, in script
+    "Pick topping on cake."
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\ast.py", line 921, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\exports.py", line 1373, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\character.py", line 1266, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\character.py", line 927, in do_display
+    display_say(who,
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\character.py", line 666, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs) # type: ignore
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\core.py", line 3906, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\core.py", line 2602, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 495, in renpy.display.render.render_screen
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\transform.py", line 747, in render
+    return transform_render(self, width, height, st, at)
+  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\image.py", line 505, in render
+    return wrap_render(self.target, width, height, st, at)
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\image.py", line 308, in wrap_render
+    rend = render(child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 884, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 371, in render
+    surf = render(self.child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 371, in render
+    surf = render(self.child, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 266, in renpy.display.render.render
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 1535, in render
+    cr = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 222, in renpy.display.render.render
+AttributeError: 'NoneType' object has no attribute 'style'
 
-Windows-8-6.2.9200
-Ren'Py 7.3.5.606
+Windows-10-10.0.19043 AMD64
+Ren'Py 8.0.1.22070801
 Passion Fruits - Demo 1.0
-Sun Aug 07 14:53:19 2022
+Sat Aug 20 23:27:55 2022

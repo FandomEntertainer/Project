@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 405: end of line expected.
-    outlines [(absolute(3),"#000000",absolute(0),absolute(0))])
-                                                              ^
+File "game/tl/cake.rpy", line 8: invalid syntax
+    LiveComposite((730,800),\
+         ^
+        (0,0), "Cake/Tiers/tier_[tiers].png",\
+        (0,0), "Cake/Toppings/[topping]_[tiers].png"\
+        ConditionSwitch(\
+    
 
-Ren'Py Version: Ren'Py 7.3.5.606
-Sat Aug 06 16:14:34 2022
+Ren'Py Version: Ren'Py 8.0.1.22070801
+Sat Aug 20 23:27:41 2022

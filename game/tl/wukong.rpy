@@ -2,7 +2,6 @@ default wukong_talking = False
 
 default wukong_expression = "Happy" # Happy, Sad
 
-# im.Scale("wukong placeholder.png", 730, 800)
 image wukong placeholder base = "Wukong/wukong placeholder base.png"
 
 image wukong mouth still = "Wukong/[wukong_expression]/[wukong_expression]_0000s_0000_mouth.png"
