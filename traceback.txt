@@ -1,76 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/test_gui.rpy", line 27, in script
-    "Pick topping on cake."
-AttributeError: 'NoneType' object has no attribute 'style'
+  File "renpy/common/00start.rpy", line 215, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 508, in script
+    python hide:
+  File "renpy/common/00keymap.rpy", line 508, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 518, in _execute_python_hide
+    renpy.load("_reload-2")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/test_gui.rpy", line 27, in script
-    "Pick topping on cake."
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\ast.py", line 921, in execute
-    renpy.exports.say(who, what, *args, **kwargs)
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\exports.py", line 1373, in say
-    who(what, *args, **kwargs)
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\character.py", line 1266, in __call__
-    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\character.py", line 927, in do_display
-    display_say(who,
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\character.py", line 666, in display_say
-    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\core.py", line 3377, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, **kwargs) # type: ignore
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\core.py", line 3906, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\core.py", line 2602, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 495, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 884, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 884, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 884, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\transform.py", line 747, in render
-    return transform_render(self, width, height, st, at)
-  File "accelerator.pyx", line 187, in renpy.display.accelerator.transform_render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\image.py", line 505, in render
-    return wrap_render(self.target, width, height, st, at)
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\image.py", line 308, in wrap_render
-    rend = render(child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 884, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 371, in render
-    surf = render(self.child, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 371, in render
-    surf = render(self.child, width, height, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\display\layout.py", line 1535, in render
-    cr = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 222, in renpy.display.render.render
-AttributeError: 'NoneType' object has no attribute 'style'
+  File "renpy/common/00start.rpy", line 215, in script call
+    call _load_reload_game from _call__load_reload_game_1
+  File "renpy/common/00keymap.rpy", line 508, in script
+    python hide:
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\ast.py", line 1131, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\python.py", line 1049, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "renpy/common/00keymap.rpy", line 508, in <module>
+    python hide:
+  File "renpy/common/00keymap.rpy", line 518, in _execute_python_hide
+    renpy.load("_reload-2")
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\loadsave.py", line 769, in load
+    log.unfreeze(roots, label="_after_load")
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\rollback.py", line 1078, in unfreeze
+    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\rollback.py", line 889, in rollback
+    self.load_failed()
+  File "C:\Users\Stian\Downloads\Renpy\renpy-8.0.1-sdk\renpy\rollback.py", line 807, in load_failed
+    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
+Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
 
-Windows-10-10.0.19043 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.1.22070801
 Passion Fruits - Demo 1.0
-Sat Aug 20 23:27:55 2022
+Sun Mar 26 15:58:42 2023

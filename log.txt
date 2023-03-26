@@ -1,22 +1,21 @@
-Thu Sep  1 12:51:51 2022
-Windows-10-10.0.19043
+Sun Mar 26 15:58:58 2023
+Windows-10-10.0.19045
 Ren'Py 8.0.1.22070801
  
 
 Bootstrap to the start of init.init took 0.04s
 Early init took 0.00s
-Loader init took 0.05s
-Loading error handling took 0.04s
-Loading script took 0.27s
-Loading save slot metadata. took 0.10s
+Loader init took 0.03s
+Loading error handling took 0.02s
+Loading script took 0.11s
+Loading save slot metadata. took 0.02s
 Loading persistent took 0.00s
 Faled to initialize steam: FileNotFoundError("Could not find module 'C:\\Users\\Stian\\Downloads\\Renpy\\renpy-8.0.1-sdk\\lib\\py3-windows-x86_64\\steam_api64.dll' (or one of its dependencies). Try using the full path with constructor syntax.")
-Running init code took 0.09s
-Loading analysis data took 0.02s
+Running init code took 0.05s
+Loading analysis data took 0.01s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Stian\\AppData\\Roaming/RenPy/backups\\Project':
-Dump and make backups. took 0.04s
+Dump and make backups. took 0.05s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.02s
@@ -27,15 +26,15 @@ Creating interface object took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
+Load screen analysis took 0.02s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.04s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.03s
+Save bytecode. took 0.00s
 Running _start took 0.00s
 Performance test:
-Interface start took 0.12s
+Interface start took 0.11s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -45,7 +44,5 @@ Vendor: "b'Intel'"
 Renderer: b'Intel(R) Iris(R) Plus Graphics'
 Version: b'4.6.0 - Build 27.20.100.8681'
 Display Info: None
-Screen sizes: virtual=(1280, 720) physical=(1738, 978) drawable=(1738, 978)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1280, 720) physical=(1920, 1001) drawable=(1920, 1001)
+Screen sizes: virtual=(1280, 720) physical=(1724, 970) drawable=(1724, 970)
 Maximum texture size: 4096x4096

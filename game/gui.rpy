@@ -61,7 +61,7 @@ define gui.text_font = "EduTASBeginner.ttf"
 define gui.name_text_font = "Dominique.otf"
 
 ## The font used for out-of-game text.
-define gui.interface_text_font = "NoodleBrain_Filled_WIP_.ttf"
+define gui.interface_text_font = "NoodleBrain_Temp.otf"
 
 ## The size of normal dialogue text.
 define gui.text_size = 25
