@@ -19,6 +19,51 @@ label act_one:
     "And, as the renowned food critic, Fyuree Pashé, it was your job to participate in cooking competitions as a judge."
     "So, that was exactly what you were here to do! Who knew that you would one day judge a competition that would bring you back to your hometown!"
     "You continue your walk to the stadium, a smile on your face as you reminisce on the days you used to walk these same streets when you were younger."
+    "As one of the first..."
+
+    menu:
+
+        "She/Her":
+
+            "She/Her {p}Is this correct?"
+            menu:
+                "Yes":
+
+                    "Great!"
+                    jump girl
+
+                "No":
+                    "Alright, that's okay!"
+                    jump pronouns
+
+        "They/Them":
+
+            "They/Them. {p}Is this correct?"
+            menu:
+                "Yes":
+
+                    "Great!"
+                    jump nonbinary
+
+                "No":
+                    "Alright, that's okay!"
+                    jump pronouns
+
+        "He/Him":
+
+            "He/Him {p}Is this correct?"
+            menu:
+                "Yes":
+
+                    "Great!"
+                    jump boy
+
+                "No":
+                    "Alright, that's okay!"
+                    jump pronouns
+
+label nonbinary:
+    "The first person to leave the city to pursue a career and talking about this city with pride. It was like a dream to be back!"
     "Though your thoughts are cut short when you feel a soft collision"
     $ quick_menu = False
     scene temp with hpunch
@@ -28,9 +73,10 @@ label act_one:
     a "And who do you think you are?"
     "You stare at the person in front of you."
     show redson placeholder with dissolve
-    a "You incompetent peasant! How dare you bump into me! Do you know who I am?"
-    "Um, not really"
-    "The young man is shocked, but his previous scowl returns as he lets out a frustrated yell before stomping away."
+    a "You incompetent peasant! How dare you bump into me! Do you know who I, RED SON, am?"
+    "Um, Red Son?"
+    a "Natrually!"
+    "You watch the man start ranting about something, the DBK family or something like that. You don't bother to stick around as you continue to walk past him."
     hide redson placeholder at offscreenleft with easeoutleft
     "{i}What a peculiar man.{/i}"
     "Though the sudden, and quite frankly, weird interaction with the fiery young man had stunned you a bit."
@@ -67,10 +113,10 @@ label act_one:
         xoffset 0
     with None
     "You turn and realize there is someone sitting at the counter, a bowl of noodles in front of them."
-    "The person is staring at you with look that's somewhere between intrigue and judgement."
+    "The person is staring at you with a look that's somewhere between intrigue and judgement."
     fp "Yeah."
     a "I wonder what made you special enough to be a judge. I applied, but they wouldn't let me."
-    fp "Well, I am {b}the{/b} renowned food critic, Fyuree Pashé, after all!"
+    fp "Well, I {b}am{/b} the renowned food critic, Fyuree Pashé, after all!"
     a "Oh, really? Well, I'm a food critic too! Have you heard of 'Golden Cicada Yum Yum'?"
     fp "Um... no"
     "The person starts slurping their noodles in an annoyed fashion. Were you supposed to know someone named, Golden Cidada Yum Yum?"
@@ -103,21 +149,14 @@ label act_one:
 ######## ONE #########
 
     "You look down at your watch and realize that the cooking competition is about to start in fifteen minutes."
-    "It's been great seeing you again, Pigsy, but I've gotta. The competition will be starting soon!"
+    fp "It's been great seeing you again, Pigsy, but I've gotta go. The competition will be starting soon!"
     show tang placeholder at right
     show pigsy placeholder at left
     with dissolve
     tang "If you're feeling nervous, I could take your place as a judge."
     fp "Um... I'm good."
-    pig "Leave her alone ya, freeloader."
+    pig "Leave her alone, ya freeloader."
     "You run out of the shop, hoping you'll make it to the competition on time."
-
-######## TWO #######
-
-    "An alarm goes off on your phone. Taking out your phone, you gasp at the time."
-    fp "Oh shoot! I'm going to be late. Sorry Pigsy, let's catch up after the competition. Dinner's on me."
-    pig "Looking foward to it. Good luck!"
-    "Waving goodbye to Pigsy and Tang, you leave the noodle shop and head out to the competition site."
     hide tang placeholder
     hide pigsy placeholder
     with dissolve
@@ -130,7 +169,7 @@ label act_one:
     "As much as you want to ask about it, you decide to keep your sights set on reaching the stadium."
     hide mei with dissolve
     "So much had changed since the last time you were home. So much to the point that you hardly recognize it anymore."
-    "While the streets looked the same, there was a distinct in the city's once carefree ambiance."
+    "While the streets looked the same, there was a distinct shift in the city's once carefree ambiance."
     "You've heard of the countless battles that have occured in Megapolis, and wondered how it affected your friends and family."
     "However, it wasn't the time to dwell on the past. Today was the Qixi Festival. A celebration of love and friendships."
     "An event the city had been looking foward to for months, and you were going to be apart of it."
@@ -147,15 +186,15 @@ label act_one:
 
 ######## SCENE FOUR ##########
 
-    "You ran, and looked for a shortcut. You looked to your left as you spotted an alleyway."
-    "Something about it with it being around stores you vaguely remember going to, so you went toward that direction."
+    "You ran and looked for a shortcut. You looked to your left as you spotted an alleyway."
+    "Something felt familiar about it with it being around stores you vaguely remember going to, so you started to run through the alleyway."
     "It wasn’t the best time to take a rest, but you could hear your heartbeat thumping in your ears."
-    "You bent down in a half-crouch, and rested my hands on your knees, breathing slowly."
+    "You bent down in a half-crouch, and rested your hands on your knees, breathing slowly."
     "You're not going to get there on time at this rate.{w} Ugh."
     "You raised your head. Standing not too far away from you was a figure, wearing a red robe with their face cast in shadow."
     "You weren't sure if he saw you or not, but moments after, you spotted a portal the color of poison from behind him and they melted into it."
     fp "What the heck was that?"
-    "The whole ordeal came and went quick, and it left an impression, but you pushed it to the back of your mind."
+    "The weird encounter left a lasting impression, but you decided to file it away for future consideration."
     "You will have enough time to think about that weird thing tomorrow."
     "It turns out, your hunch was right about the alleyway being a shortcut as you spotted the booths to sign up for the competition. You sighed in relief."
     "After this, you don't want to run for the rest of the Qixi Festival."
@@ -178,7 +217,7 @@ label act_one:
     "The person doesn’t hear you and keeps walking."
     "What did they mean by your station? You were a judge, not a contestant."
     "You hear the speakers crackle to life as a voice booms through out the stadium."
-    an "{b}{u}Welcome everyone to Qixi festival’s cooking contest! We have our three judges, and now let’s meet them!{/b}{/u}"
+    an "{b}{u}Welcome everyone to the Qixi festival’s cooking contest! We have our three judges, and now let’s meet them!{/b}{/u}"
     "How could they have all the judges? You weren’t there."
     "You rush up to the baking station to get a better view and see that there are three judges."
     an "{b}{u}Our first judge used to run a spicy barbeque food stand known as Dine or Die. Give it up for Red Son!{/b}{/u}"
@@ -191,7 +230,6 @@ label act_one:
     "A judge for Food Wars?{w=0.3} Impressive."
     an "{b}{u}And as a last minute special request, our final judge is none other than the Monkey King!{/b}{/u}"
     "Last minute? This must be the person who replaced you. As you get a better look at the Monkey King you suddenly realize it’s just a cardboard cutout. You were replaced with a cardboard cutout?"
-    show placeholder at farright with dissolve
     "Obviously, something got mixed up. Wait, so if you weren’t a judge, and the person with the badge had taken you to a baking station, were you actually one of the contestentants?"
     "Well, good thing you actually knew how to cook then. If you were going to be a contestant, you were going to do your best to win."
     hide redson placeholder
@@ -199,7 +237,7 @@ label act_one:
     with dissolve
     an "{b}{u}And let the contest begin in three, two, one, go!{/b}{/u}"
     "What to make? You examine the ingredients, and an idea pops into your head. You immediately get to work, rushing around measuring ingredients and combining them."
-    "You tune out everything except your baking, and the next thing you know, it’s done. You stand back with a sigh of satisfaction, looking at the final result."
+    "You tune out everything except your baking, and the next thing you know, it’s done. You stand back with a sigh of relief, looking at the final result."
 ####"You take in your {flavor of cake} with {number of tiers} covered in {frosting flavor} with its {specific} decorations and a {cake topper of their choosing} to top it off.
     "A gong sound resounds as the time ends. Looks like you finished just in time."
 ####### PART TWO ########
@@ -210,7 +248,7 @@ label act_one:
     show placeholder at farright
     with dissolve
     "You watch as the judges try some of your cake. You feel somewhat nervous, but confident at the same time."
-    "The judges take their time deciding, but eventually each of them vote for your cake to win first place. Your face, along with a picture of your cake, is projected on various screens around the stadium."
+    "The judges take their time deciding, but eventually each of them vote for your cake to win first place. Your face is projected on various screens around the stadium."
     an "{b}{u}Time to celebrate with some food!{/b}{/u}"
     hide redson placeholder
     hide placeholder
@@ -233,9 +271,9 @@ label act_one:
 
     "You stand at your station, unsure of what to do next. A few seconds later the speakers crackle to life."
     an "{b}{u}Attention everyone.{/b}{/u}"
-    "{b}{u}The contest winner Fyuree Pashé has used her winnings to allow each person here to get one order at the (fruit stall name).{/b}{/u}"
-    "The crowd immediately congregates at the fruit stand, and you smile as you watch them all get some fruit from the stand. They bite into the fruit, then look up, seeming somewhat dazed."
-    "Their eyes focus on the giant screens that are still showing your face along with your cake. They all drop the fruit, and you raise an eyebrow in confusion."
+    "{b}{u}The contest winner Fyuree Pashé has used her winnings to allow each person here to get one order at the delicious Passion Fruit stand!{/b}{/u}"
+    "The crowd immediately congregates at the fruit stand, and you smile as you watch them all get some mangoes that are cut into flowers with some spices sprinkled on top. They bite into the fruit, then look up, seeming somewhat dazed."
+    "Their eyes focus on the giant screens that are still showing your picture. They all drop the fruit."
     "Why would they waste the fruit after just one bite? They start looking around, their gazes quickly settling on you."
     "You couldn’t put your finger on what it was exactly, but something about the way they were looking at you made you feel uncomfortable."
     "That uncomfortable feeling turns into straight up fear when they all suddenly rush towards you. You start running, wondering what was going on."

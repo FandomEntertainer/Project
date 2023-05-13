@@ -3,6 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
+define u = Character("[name]")
 define swk = Character("Sun Wukong")
 define monk = Character("Monkey King")
 define fp = Character("Fyuree Pashé")
@@ -16,6 +17,9 @@ define a = Character("???")
 define pig = Character("Pigsy")
 define st = Character("Staff Member")
 define an = Character(None)
+
+
+define flow = Character("[flowers]")
 
 #Colors for Character names
 
@@ -97,6 +101,21 @@ init python:
 
 #Important codes to reuse
 
+##    python:
+##        flowers = renpy.input("Favorite Flowers?", length=32)
+##        flowers = flowers.strip()
+
+##        if not flowers:
+##             flowers = "roses"
+
+##    a "My favorite flowers are [flowers]!"
+
+
+############ Persistent Routes for True End 
+#Normal, Good, Bad End Variants
+
+###$ persistent.character_normal_ending = False
+
 
 ### For points
 
@@ -132,6 +151,8 @@ image temporary = im.Scale("temporary.jpg", 1300, 800)
 
 define Wukong_Trust = 0
 define Macaque_Trust = 0
+define convo = 0
+
 
 #Random things
 

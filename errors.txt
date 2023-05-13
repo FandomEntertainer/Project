@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/mk_route.rpy", line 173: is not terminated with a newline. (Check strings and parenthesis.)
-(Perhaps you left out a ' at the end of the first line.)
-    He saw the fear in your eyes as you watched the door with the utmost focus and that's when he made up his mind.
+File "game/mk_route.rpy", line 386: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    menu:
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Mon Aug 29 09:36:53 2022
+Mon Aug 29 13:32:16 2022
