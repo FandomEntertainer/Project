@@ -111,7 +111,7 @@ init python:
 ##    a "My favorite flowers are [flowers]!"
 
 
-############ Persistent Routes for True End 
+############ Persistent Routes for True End
 #Normal, Good, Bad End Variants
 
 ###$ persistent.character_normal_ending = False
@@ -152,6 +152,7 @@ image temporary = im.Scale("temporary.jpg", 1300, 800)
 define Wukong_Trust = 0
 define Macaque_Trust = 0
 define convo = 0
+define mk_love = 0
 
 
 #Random things

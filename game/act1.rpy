@@ -293,7 +293,7 @@ label nonbinary:
             jump mei_route
 
         "Monkey King Route":
-            jump swk_route
+            jump sunwukong_route
 
 
 

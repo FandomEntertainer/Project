@@ -186,6 +186,9 @@ label choice_2:
     mk "Hold on tight,"
     "MK warns you as he shoots the staff to head towards Flower Fruit Mountain, your next hiding place."
     "Though, while you two left the mob behind, you failed to notice that a certain monkey man had summoned a cloud and chased after you two."
+
+############# SCENE THREE ###################
+
     "You land at the top of Flower Fruit Mountain, letting out a sigh of relief at being so far away from the city."
     mk "Alright, follow me."
     "MK starts to walk down the mountain, and you follow him. You hear a rustle nearby and turn, just to see a monkey hop out of a nearby bush and scamper away. For the first time you fully take in your surroundings, and your steps slow as you look around."
@@ -209,7 +212,10 @@ label choice_2:
     "As MK reaches the waterfall, he stretches out his hand to touch it. A golden symbol suddenly appears on top of the water, which splits apart. You can see a cavern through the split. MK crouches a bit, ready to jump through into the cavern, then pauses."
     mk "Do you want to go first?"
     fp "Yeah, thanks."
-    "You smile at MK, then hop through into the cavern.MK steps to the other side of the waterfall as he follows you into Water Curtain Cave. The aqua blue rushing waters begin to calm, closing the entrance to the cave as the two of you begin to make your way through the cave that would lead you two to a safe place. Or so you hoped."
+
+################ SCENE FOUR ###############
+
+    "You smile at MK, then hop through into the cavern. MK steps to the other side of the waterfall as he follows you into Water Curtain Cave. The aqua blue rushing waters begin to calm, closing the entrance to the cave as the two of you begin to make your way through the cave that would lead you two to a safe place. Or so you hoped."
     "You look at your surroundings as you walk by, the sturdy feel of the bridge, the fresh air of the thriving green plants that surround you and the breathtaking view of the water gracefully flowing down to create a calm atmosphere."
     "This cave is indeed a sight to behold."
     "The greenery of the cave diminished as you neared the end of the bridge. Rocks and pillars filling the room as you notice light seeping in through a large hole in the wall. The hole clearly wasn’t cut, rather it seemed to have been broken on purpose. You walk up to the wall as you notice small, almost invisible paint on the wall."
@@ -247,6 +253,8 @@ label choice_2:
             "Monkey King’s eyes go wide as he steps back, gripping his head as falls down onto his knees. You and MK step back as you watch the scene unfold."
             "Monkey King puts his hands on the floor as he begins to violently cough. A light pink smoke escapes through his lips as he holds his chest, the coughing not ceasing just yet. MK stepped forward, about to go and help his mentor, but you stopped him."
             "The violent coughing goes on for a while longer before the smoke disappears and he is able to stand on his own two feet again."
+            $ mk_love += 1
+            $ renpy.notify ("Affection Increased +1")
             jump choice_3
 
         "Stay quiet":
@@ -374,7 +382,7 @@ label choice_3:
     "You tell the brunette as you take a step towards the Monkey King."
     fp "Fyuree Pashé is my critic name. My actual name is..."
 
-label name:
+label mk_name_input:
     python:
         name = renpy.input(_("What's your name?"))
 
@@ -393,7 +401,7 @@ label name:
         "No":
 
             "That's alright!?"
-            jump name
+            jump mk_name_input
 
 label mkname:
     "[name]."
@@ -422,6 +430,213 @@ label mkname:
     "MK watches Monkey King fly off, a soft sigh leaves his lips, but his frown disappears once he feels a hand on his shoulder. He turns his head to look at you. He smiles as he notices your gentle smile."
     mk "Wanna head inside?"
     "He points to the house that sits on a small hill up ahead. You nod as he grabs your hand and leads you to the house."
+
+    ############# SCENE FIVE ##############
+
+    "MK escorted you into the Monkey King’s house, the first thing you notice is a nice living room filled with comfortable furniture, a couch sat on one side of the room and in front of the couch was a long glass table. Across from that was a bamboo table that held an old 1990’s TV that rested on a video player."
+    "Atop the TV was a video tape, curious, you walk to it to see what movie Sun Wukong could’ve been watching. The side facing up was blank, so you flipped it over and saw the title of the movie “The Count of Monte Cristo”. ‘A classic revenge story.’"
+    "You put the video tape back on the TV and you look to the left , there was a small collection of VHS and DVDs."
+    "“Wizard of Oz”, “Halloween”, “Bambi”, “Ex Machina”, “The Hunchback of Notre Dame”, “The Outsiders”, “Who Framed Roger Rabbit”, “Predator”, and “Beetlejuice”."
+    "{/{i}‘He certainly has… interesting taste’{/i}}"
+    "You didn’t get to read all of the many movies Wukong had, as MK invited you to sit on the couch with him. You walk to the sofa and settle onto the cushion."
+    mk "He sure has quite a library of movies, doesn’t he?” MK asked."
+    mk "From the looks of it, he doesn’t seem to have a specific genre he likes or sticks to, he has horror, mystery, action, and even musicals."
+    u "Maybe they’re for his monkeys. I mean who’s to say he even watches ‘Ex Machina’?"
+
+label mk_check_1:
+    if mk_love > 0:
+        jump mk_defend
+    else:
+        jump mk_scene_five
+#---------------------------------------------------------------------------------------------------------------------
+label mk_defend:
+    mk "“Hey, uh… [name] thank you for standing up for me back there. I know Monkey King can be a bit insensitive but he’s nice once you get to know him.”"
+    u "“Sure he is.” You say skeptically."
+    mk "“I mean, when I met him, one of the first things he told me was to believe in myself.”"
+    u "“What else did he say?”"
+    mk "“Well, he said that I would be his successor and that I could handle anything. Also, he said something along the lines of him watching me.”"
+    u "“Watching you?!”"
+    mk "“Yea, wait…” MK sat there in a daze probably wondering how long the Monkey King might’ve been watching him. From the moment he took the staff or maybe when he started working at Pigsy’s noodles?"
+
+label mk_scene_five:
+    "MK puts his hand on the back of his head, tampering a little with his hair, wondering what he should say or do next that could keep you entertained until the Monkey King returns. Then an idea pops in his head."
+    mk "“Since we’re inside Monkey King’s house, how about I give you a tour of the house!”"
+    u "“Sure! Beats sitting and doing nothing.”"
+    "You and MK get up from the couch. The brunette leads you around the house showing you the bedroom, bathroom, attic, creepy basement, dining room, and lastly the kitchen."
+
+    "However the kitchen was coated in cobwebs that were seen from the corners of the microwave to the stove, it gave enough evidence that the kitchen hadn’t been used in months, maybe years."
+    mk "“Wow, looks like Monkey King doesn’t prefer to eat cooked food I guess,” MK stated."
+    u "“Then why would he have a kitchen?”"
+    mk "“Perhaps to store food?”"
+    u "“Well why bother hav-” The player is interrupted by MK."
+    mk "“I’ll go find some cleaning supplies, maybe we can try to cook something in here. Be right back.” MK left to get a broom or some rags."
+
+    "You walk around the kitchen to find some cooking utensils, however, as you were looking, you spot a basket of freshly picked peaches. Next to them were many, many bags of Peach Chips, your stomach growls in hunger, so you grab a the pink fruit from the basket."
+    "However, as you’re about to take a bite, MK walks, he sees you about to take a bite and drops everything, running towards you."
+    "{size= 0.5}“No stop!!”{/size}"
+    "In a panic, MK smacks the peach out of your hand."
+    u "“Why’d you do that?! I was hungry!”"
+    mk "MK pointed to the fruit, now on the floor. “Those aren’t peaches, take a single bite and you’ll turned into an immortal your whole life ! You’ll be just like Wukong, unable to die no matter what!”"
+    u "Suddenly your anger is turned into gratitude. “I… I didn’t know that, thank you.”"
+    mk "“No problem.” MK looks at you and notices that you’ve been craving something to eat since you got to Flower Fruit Mountain."
+    mk "“Hey, if you’re craving peaches, how about I go and get us some non-immortal peaches?”"
+    u "“You do that?”"
+    mk "“Yea, I’ll only be gone for a couple minutes, I’ll be back before you know it. Do you suppose we need anything other than peaches?”"
+    u "“Definitely, I’ll make go and make a short list of things we need.” You look around and grab a small notepad and pen and start listing items off the top of your head. When you’re done you give the list to MK, he grabs his staff and heads off."
+    "You noticed that on the floor is a broom, a bottle spray, some rags, a feather duster, and mop. You pick up the cleaning equipment."
+    "{/{i}He must’ve dropped those when he came back.{/i}"
+    "It be best to clean the kitchen while MK is gone, so you grab the supplies and got to work. As you swept and dust, you open the window to allow the fresh air to vent inside. After you finished sweeping and dusting the area, you picked up a bucket, filled it with water and soap."
+    "Mopping the floors wasn’t easy, it was covered with some sticky or slimy residue that was hard to get off, eventually you had to use a rag to scrub it off."
+    "When the kitchen looked cleaned, you made sure to check every corner and small areas just to make sure every spot was spotlessly cleaned. Afterall, there was fur found on the counter, most likely from the little monkeys that sat or maybe even played on them."
+    "As you look around the kitchen proud of your hard work, you look in the fridge and pantry for some food or leftover ingredients you can use. With the small armful of ingredients laid out on the counter, you figured it could be used to make a simple peach cake."
+    "You grab a couple bowls and round cake pans, and get to work."
+    "MK walks through the door, bags of groceries hanging from his arms and hands. He gently kicked the door behind him close and you catch his attention.You already make your way to him before he can even ask for help. Grabbing the bags on his left arm, lifting most of the weight off him, you and MK walk to the kitchen and set them on the kitchen island."
+    mk "As you’re both taking some of the items out of the bag, he notices the bowls and ingredients out.“What’re you making?”"
+    u "“Peach cake!”"
+    mk "“Yummy! Mind if I help?”"
+    u "“Of course, I just started and there’s a lot to do.” You and MK get the rest of the ingredients ready, you grab the eggs, flour, sour cream, baking powder, and salt. MK gets the butter, sugar, vanilla, and non-immortal granting peaches."
+    "However, as you and your partner are getting setup, a question lingers in your mind."
+    u "“MK, why are there so many peaches on this island?”"
+    "This hits MK with a perfect opportunity to give his very detailed response."
+    mk "“Well ever since Monkey King ate some of the Peaches of Immortality from the Celestial Realm, he took the ones he didn’t eat, leaving the garden peach-less. He turns some of the peaches into peach chips, the ones you see in that corner over there. And the rest he plants them on this island, growing more immortal peaches."
+    mk "“I assume he keeps them so that they stay out of the wrong hands, I mean if you ask me, having everlasting life sounds more like a curse and nightmare rather than a dream come true."
+    mk "Everybody makes it seem that living forever sounds exciting, but if you think about it, everyone you meet that isn’t a demon or immortal is going to come and go in your life very quickly."
+    mk "“Not to mention, Monkey King is a suitable guardian for the peaches, sure they were safer in the Celestial Realm, but Monkey King is just as good watching and protecting them."
+    mk "“Oh sorry, I’ve been going on and on.”"
+    u "“It’s ok, I actually didn’t know there was a whole backstory dedicated to the Peaches of Immortality. That’s amazing!”"
+    mk "MK is flustered by your response. “Speaking of which, if you want, do you want me to tell you about Monkey King?”"
+
+menu:
+    "Sure!":
+        mk "“Ok, so, Monkey King, believe it or not, was born from a rock that *pop* splits in half and out goes the monkey. He runs into some other monkeys nearby and they’re playing in the water, until one day they follow the source of their water to find a waterfall."
+        mk "And one of the monkeys is all like, ‘hey if anyone is brave enough to jump through and find what’s on the other side, they can become the leader’. So Monkey King jumps through and finds this large bridge and so the monkeys declare him their king, so he takes the throne and calls himself the Handsome Monkey King."
+        mk "When Monkey King goes through years of training and becomes immortal he decides to search for a weapon, so he goes to the ocean and takes this staff that weighs over 7,960 kg and Ao Guang, so amazed by his strength, summons his brothers to make him an outfit.”"
+        "As MK tells you the story you can’t help but feel that there were some things in the narrative that were being twisted or changed to beseech the monkey as a greater demon than he already is."
+        "He hands you the bowl of mixed flour, salt, and baking powder, and with a whisk, you mixed the powders together. And before you know it he’s talking about Monkey King and the Celestial Realm."
+        mk "“So when he found out, that he was given the lowest rank ever in Heaven, he’s infuriated and runs away back to Flower Fruit Mountain and to make himself feel better he calls himself the ‘Great Sage Equal to Heaven’.” Something about that peculiar part made you giggle."
+        "It was becoming clear to you that the Monkey King was somewhat of an impulsive guy, which makes sense because he is a monkey. However, if he wasn’t a monkey, would he still be as impulsive as he is?"
+        mk "“It literally takes the entire force of Heaven to capture him, in fact, Nezha, Erlang Shen, the Four Heavenly Kings, Laozi, and Guanyin had to put everything they had. They bring him to Heaven where they put him in the crucible where after nearly 50 days, it’ll remove the immortality granting pills that he ate earlier."
+        "But after 49 days, when they open the crucible, Monkey King comes out stronger than before and that’s how he got his fiery eyes or his gold vision, where he can now sense any evil presence."
+        "So the Jade Emperor calls Buddha and he makes a bet to Monkey King and to sum it up, Monkey King ends up trapped under a mountain that’s sealed. And he doesn’t get out for the next 500 years until he meets Tang Sanzang. But that’s another long story for another day.”"
+        jump bake_mk
+
+    "No thanks":
+        mk "“Oh, that’s… alright. We can just make the cake, {size= 0.5}in awkward silence{/size}. Where should we start with the cake?”"
+        u "“I can mix the dry ingredients together in one bowl while you mix the other ingredients. I written the entire recipe in this notebook so we can follow that.” While you and MK were washing your hands before you’d even open the flour or grab the peaches."
+        mk "“Where did you get the recipe?”"
+        u "“From a friend actually, we used to always make it together so the recipe stuck with me.”"
+        u "“By the way, can you pass the flour?”"
+        mk "“Yeah, sure.” MK passes you the flour and while he makes sure the Immortal Peaches far away from the regular safe-to-eat peaches."
+        jump bake_mk
+
+label bake_mk:
+    "When you both had finished mixing the the batter, you rinsed the peaches in water before cutting them in even pieces and putting them in a cake pan. MK helped by adding the batter in the pan while you cut the peaches and placing them in the batter, creating a thick layer of batter and peach slices."
+    "Once the batter was all used up, the pan was put inside the the oven. As you and MK wait, you clean up the mess in the kitchen, washing the dishes with MK helping by drying. Washing the bowls and the measuring cups and putting them away while also covering leftover ingredients in big Xiploc bags."
+    "When the kitchen was clean again, you take out a cutting knife and a pair of oven mitts ready for when the cake will be ready."
+    "More time passes, the monkeys inhabiting the island started to show up. The smell of peaches brought attention to many infants who followed the scent with their parents worriedly following in pursuit. All of them had surrounded the kitchen, eyes stared at the oven, while ambitiously waiting for the cake to be done."
+    "Luckily it didn’t take much longer for the cake finish and you take it out from the oven, placing it on the counter. You and MK notice the monkeys eyeballing the cake. However, the cake would need to cool before it could be eaten, so to avoid the monkeys from trying to grab a slice and burning their mouths, you place a glass dome over the cake."
+    "The monkeys are forced to wait what felt like hours but was only 30 minutes, before you remove the glass dome and carefully cutting the cake. Not wanting to take your eyes off the cake, you ask MK to grab a few plates, which he kindly does."
+    "You place a small piece on each plate and gently sliding it to MK to give to the monkeys. The monkeys shared slices with their families and friends, some only picking and eating the peaches while some were fighting over the same small piece not knowing there were more inside the cake."
+    "You manage to save MK and yourself the last two pieces, you hand MK his piece and he takes a bite, his eyes filled with admiration. The cake that he helped bake turned out moredelicious than he’d ever thought, no wonder the monkeys were fighting for more. Some were even licking the plate clean."
+    mk "“Wow! This cake is delicious!”"
+    u "“We both did a great job making this, I don’t think I would’ve made this as yummy if you didn’t help.”"
+    "MK was flustered by your comment."
+    u "“And besides I used to be a cook and baker at my family’s place.”"
+    mk "“I don’t think this wouldn’t be so appetizing without your baking skills.” You and MK enjoy the tasty treat when the lighthearted moment is interrupted by a loud crash."
+    u "“Is that Wukong?”"
+    mk "“No, it’s not.” MK rushes out the kitchen, you follow closely behind him, standing at the doorway wasn’t Wukong but someone that could easily be mistaken as him."
+    "He had a similar silhouette to the Monkey King, but his color design and certain aspects of his clothes and accessories were slightly different from Wukong’s. His eyes lock onto yours."
+    a "“Hello, my darling.♡”"
+    "The demon monkey slowly starts making his way towards you. You step back but he doesn’t stop he keeps advancing closer to you. MK notices you backing away from them and stretches his arms to his sides."
+    mk "“Macaque, what’re you doing here?”"
+    mac "Macaque looks at MK and scoffs at him before he answers, “I’m not here for you, kid.” He then turns his gaze back to you and points with his tail. “I’m here for them.”"
+    "Despite your frightening situation, you sense that you’ve been through this before with Wukong and remember that he was giving the same impression Wukong was doing earlier. Wukong was making strong advances towards you and had a hint of pink hidden in his eyes."
+    "That and it took three rejections from you to make him cough up some weird pink smoke for Wukong to go back to normal."
+    "You look carefully at Macaque’s eyes closely and saw the same shade of pink that Wukong had. An idea pops in your head."
+    mac "“C’mon my dear plum, let’s get out of this run down shack. I know you love me, don’t you?”"
+    u "“Love you?! I don’t even know you and if I wanted to date Wukong I would’ve gone out with him.” You expected Macaque to cough up the mysterious pink smoke, but nothing happened. He seemed to have been unaffected by your rejection as he continued walking towards your direction."
+    "MK moved to attack, but Macaque sunk into his shadow, disappearing. You feel yourself being lifted from the ground and flung over someone’s shoulder."
+    mac "“Nice seeing you kid.” Macaque said. He kept a firm grip on you before he flew out the house leaving a baffled MK behind."
+    "It didn't take long for him to pull his staff from ear and expanded his staff to a bigger size and chase in pursuit."
+
+############ SCENE SIX ################
+
+    "You stay quiet and hold on tight to the man’s back as you watch him jump from ledge to ledge. He is completely silent, his attention on trying to get down the mountain both quickly and carefully."
+    "You notice that Macaque has now reached the bottom of the mountain, the soft steps of his boots hitting the sand was comforting in a way. You let out a soft gasp when you feel hands on your waist, pulling you off the man’s shoulder as Macaque gently sets you down on a flat rock."
+    mac "“Don’t worry. You’re safe now,”"
+    "You give him a confused look as he notices your confusion. He crosses his arms as he begins to think. You weren’t exactly sure what he was thinking about. Though you would get the answer to your question soon."
+    mac "Macaque smirks to himself as you notice him creating a black hole on the sand. A beautiful purple glow outlines the black hole, the purple glow shining on his face as he looks at you, “Say. What are your favorite flowers?”"
+    u "You were a bit confused by the sudden question, but you responded. “Oh, my favorite flowers are [flowers].”"
+    "At the sound of this, Macaque smiled. He stepped inside the portal, sinking into it until he was fully submerged in the darkness, leaving you alone, sitting on the rock, portal still open."
+    "You were about to head towards the portal, until Macaque popped back up, a bouquet of [flowers] and sweets in his hands. He closes the portal before handing the gifts to you."
+    mac "“Here you go.”"
+    u "“Um, thank you?” Macaque notices your uncertainty towards his act of affection. He frowns a bit as he leans over you."
+    mac "“Say, what made you mistake me with… Wukong,” He mentions the great sage’s name through clenched teeth. Macaque looks up at you, waiting for your response as you feel a shiver run down your spine under the monkey man’s golden eyes. His constant attention was starting to get more and more uncomfortable by the second."
+    u "“You’re both just look so similar t–”"
+    mac "“I’m nothing like him,” Macaque’s voice is soft, but it’s clear that he was holding back some resentment towards his counterpart. “C’mon, look at me. I’m miles better than that so-called “hero”. He could never love you like I do, why have a king or a hero, when you could have a warrior? I am that warrior andI will fight to stay by your side,”"
+    "Even with Macaque in front of you, you caught sight of a figure behind him. You bring Macaque into a hug, giving you the opportunity to look at who was heading towards you two."
+    u "“M-MK?”"
+    mac "“MK?!” Macaque rips himself away from your “hug” as his previous calm demeanor changed into one of anger. Your eyes went wide as you were scared of what Macaque would do if he found MK. Though, to your relief, MK was no longer behind Macaque and while you were happy that he was safe, you wanted to know just exactly where he went."
+    mac "“I swear if that kid shows his face around here again, I won’t hesitate to bring him down to his knees. So, tell me, my plum. What’s it going to be? Me or him?”"
+
+    menu:
+        "Accept":
+            "You look around, trying to find a way out of this situation you had been thrown into. As you scan your surroundings, you notice a familiar face, hiding in the nearby bushes. A smile tugs at your lips as you see MK out a finger to his lips. You look at Macaque as an idea pops into your head."
+            u "You stand up and slowly wrap your arms around Macaque’s neck. “You, of course,” Why wouldn’t I choose you?”"
+            "While you are keeping the shadow monkey busy with floods of compliments and praise, MK starts to sneak his way closer to you. His movements showed skill and ease, though that illusion of perfection was broken by a shrill snap that cut through the air."
+            "A sound that had come from MK, who had stepped on a branch."
+            "Macaque’s head whipped around at the source of the sound. His eyes went wide at the sight of the brunette before squinting down into an icy glare. He then had a gentle grip on your wrists, allowing him to pull your arms away from his shoulder and free him. Freedom to deal with MK any way he pleased. All you could do was stare, your mind running with different ideas and your body moved before you could even process your next words."
+            u "“MK! Now!” Your voice boomed as Macaque was now in a tight hug, his body pressed tight to yours."
+            "MK caught on quick to your idea, a light smirk gracing his face as his grip on his staff tightened."
+            mk "“Here comes, Monkie Kid!” He jumped up into the air, staff over his head before he brought it down onto Macaque’s head. The collision of the staff and his head was hard enough to knock him out as his body shook a bit, pain evident in his movements."
+            pass
+
+
+        "Reject":
+            "You look up at him, your lips stuck together in a straight line. He looks back into your eyes, expectantly waiting for your response. The look of hope in his eyes soon dimmed at your answer."
+            u "“I don’t like you. You are no better than the Monkey King and even if you were, I still wouldn’t like you.”"
+            "Macaque’s eyebrows furrowed, but that didn’t last long as his eyes soon went wide. He grasped his neck as he fell to his knees, his body shook violently as he coughed up smoke. The light pink translucent smoke flowed out of his mouth until there was nothing left."
+            pass
+
+    mk "MK walks up to the two of you, a tight grip on his staff as he watches Macaque writhe in pain on the floor. “Um, maybe we should take back to the house,”"
+    "You nod as you watch MK carry Macaque on his back. He looks at you, seeing that you are staying by his side and he smiles as you both head back to the top of Flower Fruit Mountain."
+
+################# SCENE SEVEN #############################
+
+    "You and MK drag a coughing Macaque back up to the house. You give a concerned look towards MK, who responds with a confused shrug."
+
+    "Eventually Macaque stopped coughing, but he seemed too drained to take in his surroundings. You and MK finally reach the house, where you gratefully let go of the heavy monkey. He groans and looks up at you, but his gaze quickly shifts to MK."
+
+    mac "“MK? What’s going on?”"
+
+    mk "“Dude, you were acting super weird. You kidnapped [name]!”"
+
+    mk "“Who?”"
+
+    "MK gestures to you, and Macaque actually pays attention to you for a second. His eyes suddenly widen, and you think you see his cheeks redden a little. It’s hard to tell though with the red marks around his face. Macaque looks away with an angry expression and grumbles under his breath."
+
+    mk "“Huh?”"
+
+    mac "“It was a spell. That’s why I did that. Guess I just wasn’t paying enough attention. I’ve heard of this kind of spell before, but I don’t know if there’s a cure.”"
+
+    u "“So everyone really is under a spell?”"
+
+    mac "“What do you mean everyone?”"
+
+    u "“Everyone in the city is affected.”"
+
+    mac "“Well, good luck dealing with that. Macaque looks down at the ground and rubs the back of his neck.”"
+
+    mac "“Oh, and, um, sorry about how I acted.”"
+
+    u "“It’s alright.”"
+
+    "Macaque doesn’t respond, instead dropping into a circle of purple light that appeared beneath his feet."
+
+
+
+
+
 
 
     pause
