@@ -2,21 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/Routes/mei_route.rpy", line 70: expected statement.
-    mei “There he is. Hey, MK! MK, Hey!""
-                    ^
-
-File "game/Routes/mei_route.rpy", line 98: Only one say menuitem may exist per menu.
-    fp "“I AM NOT YOUR LOVE!” you manage to scream those words before being out of earshot from the hero duo."
-                                                                                                              ^
-
-File "game/Routes/mei_route.rpy", line 154: expected statement.
-    "No":
-        ^
-
-File "game/Routes/mei_route.rpy", line 218: Captions and say menuitems may not exist in the same menu.
-    "You can practically feel energy coming off from Mei as she yelled ‘now’, and everyone sat down around the table. Mei set down a laptop on the table, flipping it open. She also sets two black button looking things down next to her laptop."
-                                                                                                                                                                                                                                                   ^
+File "game/script.rpy", line 167: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation.
+    menu:
+    ^
 
 Ren'Py Version: Ren'Py 7.3.5.606
-Tue May 16 16:20:02 2023
+Tue May 16 17:24:54 2023

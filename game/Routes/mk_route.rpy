@@ -437,7 +437,7 @@ label mkname:
     "Atop the TV was a video tape, curious, you walk to it to see what movie Sun Wukong could’ve been watching. The side facing up was blank, so you flipped it over and saw the title of the movie “The Count of Monte Cristo”. ‘A classic revenge story.’"
     "You put the video tape back on the TV and you look to the left , there was a small collection of VHS and DVDs."
     "“Wizard of Oz”, “Halloween”, “Bambi”, “Ex Machina”, “The Hunchback of Notre Dame”, “The Outsiders”, “Who Framed Roger Rabbit”, “Predator”, and “Beetlejuice”."
-    "{/{i}‘He certainly has… interesting taste’{/i}}"
+    "{i}‘He certainly has… interesting taste’{/i}"
     "You didn’t get to read all of the many movies Wukong had, as MK invited you to sit on the couch with him. You walk to the sofa and settle onto the cushion."
     mk "He sure has quite a library of movies, doesn’t he?” MK asked."
     mk "From the looks of it, he doesn’t seem to have a specific genre he likes or sticks to, he has horror, mystery, action, and even musicals."
@@ -473,10 +473,10 @@ label mk_scene_five:
 
     "You walk around the kitchen to find some cooking utensils, however, as you were looking, you spot a basket of freshly picked peaches. Next to them were many, many bags of Peach Chips, your stomach growls in hunger, so you grab a the pink fruit from the basket."
     "However, as you’re about to take a bite, MK walks, he sees you about to take a bite and drops everything, running towards you."
-    "{size= 0.5}“No stop!!”{/size}"
+    an "{size=+10}“No stop!!”{/size}"
     "In a panic, MK smacks the peach out of your hand."
     u "“Why’d you do that?! I was hungry!”"
-    mk "MK pointed to the fruit, now on the floor. “Those aren’t peaches, take a single bite and you’ll turned into an immortal your whole life ! You’ll be just like Wukong, unable to die no matter what!”"
+    mk "MK pointed to the fruit, now on the floor. “Those aren’t peaches, take a single bite and you’ll turned into an immortal your whole life! You’ll be just like Wukong, unable to die no matter what!”"
     u "Suddenly your anger is turned into gratitude. “I… I didn’t know that, thank you.”"
     mk "“No problem.” MK looks at you and notices that you’ve been craving something to eat since you got to Flower Fruit Mountain."
     mk "“Hey, if you’re craving peaches, how about I go and get us some non-immortal peaches?”"
@@ -484,7 +484,7 @@ label mk_scene_five:
     mk "“Yea, I’ll only be gone for a couple minutes, I’ll be back before you know it. Do you suppose we need anything other than peaches?”"
     u "“Definitely, I’ll make go and make a short list of things we need.” You look around and grab a small notepad and pen and start listing items off the top of your head. When you’re done you give the list to MK, he grabs his staff and heads off."
     "You noticed that on the floor is a broom, a bottle spray, some rags, a feather duster, and mop. You pick up the cleaning equipment."
-    "{/{i}He must’ve dropped those when he came back.{/i}"
+    "{i}He must’ve dropped those when he came back.{/i}"
     "It be best to clean the kitchen while MK is gone, so you grab the supplies and got to work. As you swept and dust, you open the window to allow the fresh air to vent inside. After you finished sweeping and dusting the area, you picked up a bucket, filled it with water and soap."
     "Mopping the floors wasn’t easy, it was covered with some sticky or slimy residue that was hard to get off, eventually you had to use a rag to scrub it off."
     "When the kitchen looked cleaned, you made sure to check every corner and small areas just to make sure every spot was spotlessly cleaned. Afterall, there was fur found on the counter, most likely from the little monkeys that sat or maybe even played on them."
@@ -521,7 +521,7 @@ menu:
         jump bake_mk
 
     "No thanks":
-        mk "“Oh, that’s… alright. We can just make the cake, {size= 0.5}in awkward silence{/size}. Where should we start with the cake?”"
+        mk "“Oh, that’s… alright. We can just make the cake, {size=-5}in awkward silence{/size}. Where should we start with the cake?”"
         u "“I can mix the dry ingredients together in one bowl while you mix the other ingredients. I written the entire recipe in this notebook so we can follow that.” While you and MK were washing your hands before you’d even open the flour or grab the peaches."
         mk "“Where did you get the recipe?”"
         u "“From a friend actually, we used to always make it together so the recipe stuck with me.”"
@@ -566,6 +566,12 @@ label bake_mk:
     mac "“Don’t worry. You’re safe now,”"
     "You give him a confused look as he notices your confusion. He crosses his arms as he begins to think. You weren’t exactly sure what he was thinking about. Though you would get the answer to your question soon."
     mac "Macaque smirks to himself as you notice him creating a black hole on the sand. A beautiful purple glow outlines the black hole, the purple glow shining on his face as he looks at you, “Say. What are your favorite flowers?”"
+    python:
+        flowers = renpy.input("Favorite Flowers?", length=32)
+        flowers = flowers.strip()
+        if not flowers:
+            flowers = "roses"
+
     u "You were a bit confused by the sudden question, but you responded. “Oh, my favorite flowers are [flowers].”"
     "At the sound of this, Macaque smiled. He stepped inside the portal, sinking into it until he was fully submerged in the darkness, leaving you alone, sitting on the rock, portal still open."
     "You were about to head towards the portal, until Macaque popped back up, a bouquet of [flowers] and sweets in his hands. He closes the portal before handing the gifts to you."
@@ -633,11 +639,5 @@ label bake_mk:
 
     "Macaque doesn’t respond, instead dropping into a circle of purple light that appeared beneath his feet."
 
-
-
-
-
-
-
-    pause
-    return
+pause
+return
