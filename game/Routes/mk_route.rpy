@@ -383,12 +383,11 @@ label choice_3:
     fp "Fyuree Pashé is my critic name. My actual name is..."
 
 label mk_name_input:
-    python:
-        name = renpy.input(_("What's your name?"))
-
-        name = name.strip() or __("Player")
-    if name =="":
-            "Please enter a name."
+$ name = renpy.input("What's your name?").strip()
+if name == "":
+    $ name = "Fyuree"
+if name.lower() in unwanted_name:
+    $ renpy.quit()
 
     "[name], is this correct?"
 
@@ -423,7 +422,7 @@ label mkname:
     mk "I’ll come with yo--"
     monk "No,"
     "Monkey King holds a hand out, stopping the boy from taking another step towards him."
-    monk "I need you to stay here to guard your new friend. It’s not safe for them to be alone right now, you understand?"
+    monk "I need you to stay here to guard your new friend. It’s not safe for them to be alone right now, do you understand?"
     "MK lets out a small groan as he shoves his hands in his pockets and kicks the small rocks that are scattered around the ground with his feet."
     mk "Fine, I understand,"
     "Monkey King smiles before using his 72 transformations to transform into a bird."

@@ -17,14 +17,21 @@ define a = Character("???")
 define pig = Character("Pigsy")
 define st = Character("Staff Member")
 define an = Character(None)
+define g = Character("Grimpil Sun")
 
 
 define flow = Character("[flowers]")
+
+#### Unwanted name codes
+
+default name = ""
+define unwanted_name = ["eileen", "hugi", "weaboo", "MK", "mk", "Mk", "Wukong", "Monkey King", "Sun Wukong", "Sun", "Macaque", "Six Ears", "Pigsy", "Sandy", "Bai He", "Red Son", "Mei", "Tang", "Mo"]
 
 #Colors for Character names
 
 define swk = Character("Sun Wukong", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
 define monk = Character("Monkey King", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
+define g = Character("Grimpil Sun", color ="#fcfcfc",who_outlines=[(absolute(3),"#fca503",absolute(0),absolute(0))])
 define u = Character("[name]", color ="#fcfcfc",who_outlines=[(absolute(3),"#000000",absolute(0),absolute(0))])
 define fp = Character("Fyuree Pashé", color ="#fcfcfc",who_outlines=[(absolute(3),"#000000",absolute(0),absolute(0))])
 define ma = Character("Ai Mishaekho", color ="#fcfcfc",who_outlines=[(absolute(3),"#e319b7",absolute(0),absolute(0))])
@@ -162,7 +169,14 @@ define mk_love = 0
 # The game starts here.
 
 label start:
-    scene temporary
+
+    $ pronoun1 = "They"
+    $ pronoun2 = "Them"
+    $ pronoun3 = "Their"
+    $ player_sex = "Nonbinary"
+
+
+scene temporary
 
 an "testing grounds"
 menu:

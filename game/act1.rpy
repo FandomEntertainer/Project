@@ -20,50 +20,47 @@ label act_one:
     "So, that was exactly what you were here to do! Who knew that you would one day judge a competition that would bring you back to your hometown!"
     "You continue your walk to the stadium, a smile on your face as you reminisce on the days you used to walk these same streets when you were younger."
     "As one of the first..."
+menu:
+    "She/Her":
+        $ player_sex = "Female"
+        $ pronoun1 = "she"
+        $ pronoun2 = "her"
+        $ pronoun3 = "her"
+        $ general1 = "woman"
+        jump sexchosen1
 
-    menu:
+    "He/Him":
+        $ player_sex = "Male"
+        $ pronoun1 = "he"
+        $ pronoun2 = "him"
+        $ pronoun3 = "his"
+        $ general1 = "man"
+        jump sexchosen1
 
-        "She/Her":
+    "They/Them":
+        $ player_sex = "Nonbinary"
+        $ pronoun1 = "they"
+        $ pronoun2 = "them"
+        $ pronoun3 = "their"
+        $ general1 = "person"
+        jump sexchosen1
 
-            "She/Her {p}Is this correct?"
-            menu:
-                "Yes":
+label sexchosen1:
+    if player_sex == "Female":
+        "%(pronoun1)s, %(pronoun2)s, %(pronoun3)s! WonderfuL! %(general1)s"
+        jump actualstart
 
-                    "Great!"
-                    jump girl
+    if player_sex == "Male":
+        "%(pronoun1)s, %(pronoun2)s, %(pronoun3)s! WonderfuL! %(general1)s"
+        jump actualstart
 
-                "No":
-                    "Alright, that's okay!"
-                    jump pronouns
+    if player_sex == "Nonbinary":
+        "%(pronoun1)s, %(pronoun2)s, %(pronoun3)s! WonderfuL! %(general1)s"
+        jump actualstart
 
-        "They/Them":
 
-            "They/Them. {p}Is this correct?"
-            menu:
-                "Yes":
-
-                    "Great!"
-                    jump nonbinary
-
-                "No":
-                    "Alright, that's okay!"
-                    jump pronouns
-
-        "He/Him":
-
-            "He/Him {p}Is this correct?"
-            menu:
-                "Yes":
-
-                    "Great!"
-                    jump boy
-
-                "No":
-                    "Alright, that's okay!"
-                    jump pronouns
-
-label nonbinary:
-    "The first person to leave the city to pursue a career and talking about this city with pride. It was like a dream to be back!"
+label actualstart:
+    "The first %(general1)s to leave the city to pursue a career and continue talking about this city with pride. It was like a dream to be back!"
     "Though your thoughts are cut short when you feel a soft collision"
     $ quick_menu = False
     scene temp with hpunch
@@ -271,7 +268,7 @@ label nonbinary:
 
     "You stand at your station, unsure of what to do next. A few seconds later the speakers crackle to life."
     an "{b}{u}Attention everyone.{/b}{/u}"
-    "{b}{u}The contest winner Fyuree Pashé has used her winnings to allow each person here to get one order at the delicious Passion Fruit stand!{/b}{/u}"
+    "{b}{u}The contest winner Fyuree Pashé has used %(pronoun3)s winnings to allow each person here to get one order at the delicious Passion Fruit stand!{/b}{/u}"
     "The crowd immediately congregates at the fruit stand, and you smile as you watch them all get some mangoes that are cut into flowers with some spices sprinkled on top. They bite into the fruit, then look up, seeming somewhat dazed."
     "Their eyes focus on the giant screens that are still showing your picture. They all drop the fruit."
     "Why would they waste the fruit after just one bite? They start looking around, their gazes quickly settling on you."
@@ -282,7 +279,7 @@ label nonbinary:
     "The people keep chasing you though. You run through some alleys and manage to lose them. Why were they chasing you? And why were they saying they loved you?"
     "You needed answers. You hesitantly peek your head out of the alley, determined to find answers, but also to avoid that crazy crowd. The coast looked clear, so you begin to head out."
 
-    "What route?"
+    "What route would you like to go on?"
     $ quick_menu = False
 
     menu:

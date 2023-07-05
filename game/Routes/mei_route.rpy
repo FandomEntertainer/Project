@@ -203,7 +203,7 @@ label redson_reject:
             fp "“Actually, he was being super affectionate.”"
             mk "“I knew it!”"
             "The tiny blush in Red Son’s cheeks was now a bright red that covered most of his face."
-            rs "“I did not you peasant!”"
+            rs "“I did not you, peasant!”"
             fp "“Really? I thought you said you wanted to conquer the world with me. And now you call me a peasant? How rude.”"
             "MK starts laughing to the side, and Red Son’s eyes and hair burst into flame."
             rs "“How dare you mock me, Red Son!”"
